@@ -2,7 +2,7 @@
 
 #### Authors and Contact Information
 * Joshua Taylor (jtay25@uw.edu)
-* (enter info Here)
+* Youseph Taffal (ymtaffal@uw.edu)
 * (enter info here)
 * (enter info here)
 
