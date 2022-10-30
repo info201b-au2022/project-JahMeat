@@ -3,7 +3,7 @@
 #### Authors and Contact Information
 * Joshua Taylor (jtay25@uw.edu)
 * Youseph Taffal (ymtaffal@uw.edu)
-* (enter info here)
+* Jah Chen (jah0311@uw.edu)
 * (enter info here)
 
 #### Affiliations
@@ -19,4 +19,7 @@
 * nba
 
 ## **Abstract**
-  The primary question of our project is how injures in the NBA effect a given player's health in the long term, which is of importance because of the trend of decline in an athlete's physical health post retirement. We plan to address this issue by researching and analyzing data regarding common injuries in the sport, and how they effect a player of an extended period of time. The primary concern is identifying and healing the primary injuries that effect an athletes post retirement health, which we will address by understanding what the common injuries are and how they are treated.
+  The primary question of our project is how injures in the NBA affect a given player's career and thus questionability on their long term health. We plan to address this issue by researching and analyzing data regarding individual players injuries, types of injuries, and impact on player career status. 
+
+## **Introduction**
+  The primary goal of this project is to extract information on NBA injuries to their career status to address the lack of data and notions on sports injury treatments released on the web to the public.
