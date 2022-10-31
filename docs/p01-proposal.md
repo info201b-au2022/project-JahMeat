@@ -21,42 +21,10 @@
 * NBA
 
 ## **Abstract**
-<<<<<<< HEAD
-  The primary question of our project is how injures in the NBA affect a given player's career and thus questionability on their long term health. We plan to address this issue by researching and analyzing data regarding individual players injuries, types of injuries, and impact on player career status.
+The primary question being asked in this project is how sports injures in the NBA can affect a given player's career and thus the impact on their long term health by measurement of life expectancy. It is important to conduct research and analyze data about the well-beings of competitive sports players to push overall medical incentives for sports medicine development and attention to creating better health plans. We plan to address this question by conducting a thorough analysis on NBA players who have been reported to suffer some form of injuries or illness that affected their participation in their careers as well as effects on their life expectancy.
 
 ## **Introduction**
-  The primary goal of this project is to extract information on NBA injuries to their career status to address the lack of data and notions on sports injury treatments released on the web to the public.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  Basketball has always been an essential part of American sports. The National Basketball Association, NBA, has always been part of the top 3 big sports organization in attaining an ever growing popularity amongst pop culture and promotion of brands and industries in the U.S. However, with that much monetization and public supports, risks in player safety and implications on health and wellness arise when it comes to contact sports like basketball. In the world of NBA, players suffering from physical minor injuries are quite common. To an extent, the types of injuries can vary in a broad spectrum of fatality, resulting in shortening of life or imminent death. NBA players deserve better medical treatments and services for the risk they are willing to take for entertainment and the positive economic impact in the U.S. By developing this project, we hope to incentivize medical research in sports medicine and push for better health plans for NBA players as well as other players in prevalent sports in the U.S.
 
 ## **Problem Domain**
 #### Project framing
@@ -69,8 +37,3 @@
   As humans we all value our health. According to John Hopkins Medicine, sports and recreational activity are responsible for nearly 21% of traumatic brain injuries among American children (2019). Clearly, by becoming an athlete one is putting their physical health at risk. Researching and understanding how certain injuries effect an athlete's career and long - term health can help point towards the direction treatments need to go in order to mitigate the damage of certain injuries.
 #### Harms and Benefits
   The benefits of this project come from the insights that can be drawn from analyzing and understanding how certain sports injuries effect people in the long term. The harms however, lie in the fact that the NBA consists of mostly males. Male and female anatomy are different in a many ways, meaning certain injuries that effect a male may effect a female differently. Since this research is limited to tracking NBA injuries, this could be of harm to female athletes.  
-=======
-  The primary question being asked in this project is how sports injures in the NBA can affect a given player's career and thus the impact on their long term health by measurement of life expectancy. It is important to conduct research and analyze data about the well-beings of competitive sports players to push overall medical incentives for sports medicine development and attention to creating better health plans. We plan to address this question by conducting a thorough analysis on NBA players who have been reported to suffer some form of injuries or illness that affected their participation in their careers as well as effects on their life expectancy.
-## **Introduction**
-  Basketball has always been an essential part of American sports. The National Basketball Association, NBA, has always been part of the top 3 big sports organization in attaining an ever growing popularity amongst pop culture and promotion of brands and industries in the U.S. However, with that much monetization and public supports, risks in player safety and implications on health and wellness arise when it comes to contact sports like basketball. In the world of NBA, players suffering from physical minor injuries are quite common. To an extent, the types of injuries can vary in a broad spectrum of fatality, resulting in shortening of life or imminent death. NBA players deserve better medical treatments and services for the risk they are willing to take for entertainment and the positive economic impact in the U.S. By developing this project, we hope to incentivize medical research in sports medicine and push for better health plans for NBA players as well as other players in prevalent sports in the U.S.
->>>>>>> fb0f7d4957edf298d6d63176920078a902f79b8c
