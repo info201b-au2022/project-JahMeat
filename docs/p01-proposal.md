@@ -6,6 +6,7 @@
 * Joshua Taylor (jtay25@uw.edu)
 * Youseph Taffal (ymtaffal@uw.edu)
 * Jah Chen (jah0311@uw.edu)
+* Noor Aamir (nooraamir47@uw.edu)
 
 #### Affiliations
 * INFO-201: Technical Foundations of Informatics - The Information School - University of Washington  
@@ -67,8 +68,16 @@ _Table 1. Summary of Datasets_
 ## **Limitations**
  With the data provided alongside the research questions we wish to answer and analyze, we must also identify the limitations prior to starting our analysis in order to consciously account for the possible constraints or impediments when drawing out conclusions based on our research. As previously stated, one of the biggest limitations would be the fact that a majority of the data provided was accounting male athletes. With noteworthy differences in anatomy between male and female athletes respectively, we may not be able to accurately summarize the proposed mitigation of sports injuries and increased physical health amongst the population as a whole as more data specific to female athletes could prove to show that different precautions or health side effects are at play depending on the sex of the athlete.
  Another potential limitation would be the idea of correlation v.s. causation when looking at the data of mortality amongst NBA players. We know that the majority of the athletes who are able to make it professional, not just within basketball, are genetically gifted. While this genetic component of the physical body may prove advantageous in the sport they play, there could be certain health defects that come alongside some of these traits, in basketball one in particular being the height of the athlete. So while we will attempt to analyze the extent to which these NBA athletes’ injuries affect their long term physical health, it is very possible that most of these gifted individuals were born with preexisting health concerns that would impact their lifelong fitness regardless of whether or not they participated in the sport, let alone faced injury.
+ We as a team will address these limitations from many different angles throughout the execution of our analysis. For our first limitation, that being the fact that the data sets we current have found are majorly male athletes, we have the option of either narrowing down our analysis to only speak upon the effects sports injuries have on male player’s careers and long term health specifically, or we could look into more datasets available online and compare and contrast the female and male data sets with one another in order to see any possible correlation or crossover between the two groups.
+ In terms of our second limitation, the idea of correlation v.s. causation, we would be able to further narrow down the specific relationship between the sports related injury and the future of the athlete’s long term health by obtaining more information on those tested and seeing whether or not the athlete’s tested and reported within the datasets ever had life threatening or severe illnesses or conditions that could play a role in the future of their health. We could also compare our findings to some findings previously analyzed amongst the health side effects of taller individuals to see if our analysis matches up with the findings.
+
 
 ## **Implications**
-  Assuming we were able to accurately analyze the data provided and answer the research questions we created, our thoughts within this analysis could have many implications in the world outside the NBA for many different people such as technologists, designers, and policymakers. 
+  Assuming we were able to accurately analyze the data provided and answer the research questions we created, our thoughts within this analysis could have many implications in the world outside the NBA for many different people such as technologists, designers, and policymakers.
   For example, assuming we found a clear correlation between certain factors and their respective implications on the health and wellbeing of the athletes, current or future technologists and designers would be able to design strategic precautions within future projects, whether that be better equipment for the athletes to use during training to minimize chances of injuries, to shoe companies constructing better designs for ankle support and mobility to keep players injury free.
   The implications could go as far as outside the realms of the court and make its appearance as potential factors of consideration for policy makers when considering current or future policies on not just the health and wellbeing of NBA athletes, but all humans partaking in similar activities such as running, jumping, and athletic movements. By answering these key questions, we will hopefully be able to impact not only the health of our favorite NBA athletes, but also those partaking in any physical activity on or off the court.
+
+## **Appendix A: Questions**
+Nope! We have no questions.
+
+## **References**
