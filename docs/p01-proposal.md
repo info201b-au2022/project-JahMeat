@@ -34,13 +34,13 @@ The primary question being asked in this project is how sports injures in the NB
 #### Indirect Stakeholders  
   Indirect stakeholders include but are not limited to, medical practitioners, their patients, and other people whose health can be positively or negatively effected by any discoveries made in this research.
 #### Human Values  
-  As humans we all value our health. According to John Hopkins Medicine, sports and recreational activity are responsible for nearly 21% of traumatic brain injuries among American children (2019). Clearly, by becoming an athlete one is putting their physical health at risk. Researching and understanding how certain injuries effect an athlete's career and long - term health can help point towards the direction treatments need to go in order to mitigate the damage of certain injuries.
+  As humans we all value our health. According to John Hopkins Medicine, sports and recreational activity are responsible for nearly 21% of traumatic brain injuries among American children (Sports Injury Statistics, 2019). Clearly, by becoming an athlete one is putting their physical health at risk. Researching and understanding how certain injuries effect an athlete's career and long - term health can help point towards the direction treatments need to go in order to mitigate the damage of certain injuries.
 #### Harms and Benefits
   The benefits of this project come from the insights that can be drawn from analyzing and understanding how certain sports injuries effect people in the long term. The harms however, lie in the fact that the NBA consists of mostly males. Male and female anatomy are different in a many ways, meaning certain injuries that effect a male may effect a female differently. Since this research is limited to tracking NBA injuries, this could be of harm to female athletes. For example, due to women having about 52% of the average upper body-strength of a male, females often receive more sports-related injuries than males (Gombera, 2020).  
 #### Medical Wellness  
   The project will maintain a focus on  health and understanding, with a focus on extrapolating the data in order to come to conclusions on how best to help athletes, and anybody who's prone to such injuries. Although physical injuries are commonly considered as injuries such as broken arms, torn ACL's etc. this project will also cover injuries such as concussions, head trauma and more. Sports injuries is one of the leading causes for head trauma that causes permanent mental damage.
 #### Inclusivity
-  As touched upon previously, men and women's bodies react differently to physical injury. That being said, the dataset the project will be examining is from NBA statistics which is generally male only. That being said, the research will be done with this limitation in mind, with an effort being made to find solutions for both men and women. 
+  As touched upon previously, men and women's bodies react differently to physical injury. That being said, the dataset the project will be examining is from NBA statistics which is generally male only. That being said, the research will be done with this limitation in mind, with an effort being made to find solutions for both men and women.
 ## **Research Questions**
 
   * **"To what extent does the average sports injury result into a career - ending injury for NBA athletes"** This question seeks to address the how behind career - ending injuries, such as the types of injuries. This question is motivated by the need to identify which injuries will most likely be career ending.
@@ -84,3 +84,8 @@ _Table 1. Summary of Datasets_
 Nope! We have no questions.
 
 ## **References**
+   Gombera, M. (2020, October 3). Gender and Sports Injuries. https://www.gomberamd.com/blog/how-does-gender-effect-sports-injuries-22576.html  
+
+  Loberg, L.A. (2009). In That Instant It Was Over: The Athlete's Experience of a Career-Ending Injury.
+
+  Sports Injury Statistics. (2019, November 19). Johns Hopkins Medicine. https://www.hopkinsmedicine.org/health/conditions-and-diseases/sports-injuries/sports-injury-statistics
