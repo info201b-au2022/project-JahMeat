@@ -1,4 +1,4 @@
-#[Injuries in the NBA: Analyzing the Long Term Effects of Sports Injuries](https://github.com/info201b-au2022/project-JahMeat/blob/main/docs/p01-proposal.md)
+# [Injuries in the NBA: Analyzing the Long Term Effects of Sports Injuries](https://github.com/info201b-au2022/project-JahMeat/blob/main/docs/p01-proposal.md)
 
 #### Code Name: `Stay_Ballin`
 
