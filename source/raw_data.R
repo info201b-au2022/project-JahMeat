@@ -22,14 +22,14 @@ death_since_1990 <- nba_raw %>%
   nrow
   
 
-# Finding age of death of average player who has died since the NBA started and 2019(Joshua)
+# Finding average age of death of players who have died since the NBA started and 2019(Joshua)
 
 average_age_death <- nba_raw %>%
   filter(death == "Yes") %>%
   summarise(mean(ageevent)) %>%
   pull()
 
-# Finding how many people died at age 30(Joshua)
+# Finding how many people died at or below age 30(Joshua)
 
 under_30 <- nba_raw %>%
   filter(death == "Yes") %>%
