@@ -57,8 +57,6 @@ nba_injuries <- nba_injuries %>%
          Status = str_extract(Notes, "(?<=\\()([^()]*?)(?=\\)[^()]*$)")
   )
 
-nba_injuries$Injuries <- str_extract(nba_injuries$Injuries, "\\w+")
-
 # Finding the year with the most recorded injuries in the dataset
 
 most_recorded_injuries <- nba_injuries %>% 
