@@ -10,6 +10,10 @@ View(nba_raw)
 nba_injuries <- read.csv("data/injuries.csv")
 View(nba_injuries)
 
+nba_mortality <- read_excel("data/MortalityUSA2000to2018.xlsx")
+white_nba_mortality <- read_excel("data/WHITEMortalityUSA2000to2018.xlsx")
+black_nba_mortality <- read_excel("data/BLACKMortalityUSA2000to2018.xlsx")
+
 # This code is observations from the NBA_raw_data2019 dataset
 
 # Finding how many people born in 1990 or after have died in the NBA(Joshua) 
@@ -105,6 +109,17 @@ details_out_indefinitely <- nba_injuries %>%
   arrange(-injury_frequency) %>% 
   head() %>% 
   pull(Injuries)
-  
-    
+
+
+#Youseph's work
+
+#Finding the average SMR of white athletes
+white_average <-  sum(white_nba_mortality$Averages) / nrow(white_nba_mortality)
+white_average
+#Finding the average SMR of black athletes
+
+black_average <-  sum(black_nba_mortality$Averages) / nrow(black_nba_mortality)
+black_average
+
+
   
