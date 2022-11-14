@@ -6,7 +6,6 @@
 * Joshua Taylor (jtay25@uw.edu)
 * Youseph Taffal (ymtaffal@uw.edu)
 * Jah Chen (jah0311@uw.edu)
-* Noor Aamir (nooraamir47@uw.edu)
 
 #### Affiliations
 * INFO-201: Technical Foundations of Informatics - The Information School - University of Washington  
