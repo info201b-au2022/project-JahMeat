@@ -22,7 +22,7 @@ injury_frequency <- nba_injuries %>%
   head(10) %>% 
   pull(Injuries)
 
-# Computing the top 4 most frequently occuring career status caused by injuries
+# Computing the top 4 most frequently occurring career status caused by injuries
 
 status_frequency <- nba_injuries %>% 
   group_by(Status) %>% 

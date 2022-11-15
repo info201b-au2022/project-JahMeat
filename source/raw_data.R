@@ -61,25 +61,15 @@ nba_injuries <- nba_injuries %>%
          Status = str_extract(Notes, "(?<=\\()([^()]*?)(?=\\)[^()]*$)")
   )
 
-# Finding the year with the most recorded injuries in the dataset
-
-most_recorded_injuries <- nba_injuries %>% 
-  mutate(year = str_extract(Date, "....")) %>% 
-  group_by(year) %>% 
-  summarize(Records = length(Injuries)) %>% 
-  filter(Records == max(Records)) %>% 
-  pull(year)
-
-# Finding the most common career status due to injuries for each year
+# Finding the most common career status caused by injuries
 
 most_common_status <- nba_injuries %>% 
-  mutate(year = str_extract(Date, "....")) %>%
-  group_by(year, Status) %>% 
-  summarize(status_frequency = max(length(Status))) %>% 
-  group_by(year) %>% 
-  filter(status_frequency == max(status_frequency)) %>% 
-  select(-status_frequency)
-  
+  group_by(Status) %>% 
+  summarize(frequency = length(Status)) %>% 
+  filter(frequency == max(frequency)) %>% 
+  pull(Status)
+
+most_common_status
 
 # Finding the proportion of players that were "out indefinitely" in the dataset
 
@@ -87,6 +77,8 @@ prop_out_indefinitely <- nba_injuries %>%
   filter(Status == "out indefinitely")
 
 prop_out_indefinitely <- nrow(prop_out_indefinitely) / nrow(nba_injuries)
+
+prop_out_indefinitely
 
 # Finding the most common injury that caused players to be "out indefinitely" in the dataset
 
@@ -97,6 +89,8 @@ out_indefinitely_injuries <- nba_injuries %>%
   summarize(num_injuries = length(abbr_injuries)) %>% 
   filter(num_injuries == max(num_injuries)) %>% 
   pull(abbr_injuries)
+
+out_indefinitely_injuries
 
 # Listing the details of the most common injury to cause "out indefinitely" in the dataset
 
@@ -109,6 +103,8 @@ details_out_indefinitely <- nba_injuries %>%
   arrange(-injury_frequency) %>% 
   head() %>% 
   pull(Injuries)
+
+details_out_indefinitely
 
 
 #Youseph's work
