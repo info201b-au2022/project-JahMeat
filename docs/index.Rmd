@@ -11,6 +11,7 @@ setwd("C:/Users/joshu/Documents/info201/projects/project-JahMeat")
 source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/chart_nba_raw.R")
 source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/chart_nba_injuries.R")
 source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/chart_mortality_bw.R")
+source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/aggregate_table.R")
 ```
 
 ## Data Analysis Review
@@ -18,7 +19,10 @@ source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/chart_m
 After analyzing various datasets, we extracted various datapoints relevant to the direction of our research, and useful in answering our research questions. Important datapoints that we came across is the most frequently occuring injuries, and how one's career status is effected by these injuries. This is visualized in the chart "Most Common NBA Career Status caused by Types of Injuries 2010 - 2018", where we compare these variables with a bar graph. Furthermore, we also observed the role of race in the long term health of athletes. We did this by calculating the age of each athlete and the SMR(Standard Mortality Rate) for both blacks and whites seperately, and created a scatterplot visualization. Lastly, we summarized information regarding the weigth and age of NBA players who died at an early age. We then used a line graph to visualize this data.
 
 ## Aggregated Data Table
-
+```{r, echo = FALSE}
+library(knitr)
+knitr::kable(nba_table, format = "html", caption = "Aggregated Data")
+```
 ## Data Visualizations
 
 ```{r, echo = FALSE}
@@ -54,5 +58,5 @@ ggplot(black_mortality, aes(x = age, y = Averages, color = "red")) +
   labs(x = 'Age of Athlete', y = 'Average SMR from 2000 to 2018', title = 'Scatterplot of Age v.s. Mortality Rate')
 ```
 
-I decided to include these charts in order to compare not only the change in mortality rates over time for these athletes, but also to show the differences in the trends over time between black and white players respectively. 
+This chart is used to compare not only the change in mortality rates over time for these athletes, but also to show the differences in the trends over time between black and white players respectively. 
 By doing so, we are able to see how another factor such as race can play a role in determining the long term health Of these athletes, and how it compares between the two races. It also raises the question whether or not it is the race itself or other determining factors such as average household income and access to healthcare that are to blame for the differences.
