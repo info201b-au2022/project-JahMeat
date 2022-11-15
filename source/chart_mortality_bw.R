@@ -24,6 +24,7 @@ ggplot(black_mortality, aes(x = age, y = Averages, color = "red")) +
 #These athletes, but also to show the differences in the trends over time between black and white players respectively. 
 #By doing so, we are able to see how another factor such as race can play a role in determining the long term health 
 #Of these athletes, and how it compares between the two races. It also raises the question whether or not it is the
-#Race itself or other dertmining factors such as average household income and access to healthcare that are to blame for 
-#The differences
+#Race itself or other determining factors such as average household income and access to healthcare that are to blame for 
+#the differences.
 
+  

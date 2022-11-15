@@ -1,7 +1,5 @@
 library("tidyverse")
 library("ggplot2")
-setwd("~/Documents/info201/projects/project-JahMeat")
-
 # Retrieve and wrangle Dataset
 
 nba_injuries <- read.csv("data/injuries.csv")
