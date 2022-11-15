@@ -1,54 +1,58 @@
 ---
-title: "Your Project Title"
-author: "project team members"
-date: "1/22/2022"
+title: "Injuries in the NBA: Analyzing the Long Term Effects of Sports Injuries"
+author: "Joshua Taylor, Youseph Taffal, Jah Chen"
+date: "11/14/2022"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+setwd("C:/Users/joshu/Documents/info201/projects/project-JahMeat")
+source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/chart_nba_raw.R")
+source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/chart_nba_injuries.R")
+source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/chart_mortality_bw.R")
 ```
 
-## What is this file for?
+## Data Analysis Review
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
+After analyzing various datasets, we extracted various datapoints relevant to the direction of our research, and useful in answering our research questions. Important datapoints that we came across is the most frequently occuring injuries, and how one's career status is effected by these injuries. This is visualized in the chart "Most Common NBA Career Status caused by Types of Injuries 2010 - 2018", where we compare these variables with a bar graph. Furthermore, we also observed the role of race in the long term health of athletes. We did this by calculating the age of each athlete and the SMR(Standard Mortality Rate) for both blacks and whites seperately, and created a scatterplot visualization. Lastly, we summarized information regarding the weigth and age of NBA players who died at an early age. We then used a line graph to visualize this data.
 
-* Please see Canvas for more details.
+## Aggregated Data Table
 
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
+## Data Visualizations
+
+```{r, echo = FALSE}
+setwd("C:/Users/joshu/Documents/info201/projects/project-JahMeat")
+chart_under_30
 ```
 
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
+This chart is used to visualize the weights and ages of each NBA player who died below age 30. This information is useful to discover the health of each of these players who died at a young  age, as extremes in weight can often be proof of a decline in health
+```{r, echo = FALSE}
+setwd("C:/Users/joshu/Documents/info201/projects/project-JahMeat")
+plot(injury_plot)
 ```
 
-> `r msg` Hope you have a good day!! 
+The aim of this chart is to directly draw a correlation between NBA injuries
+and the effects on a player's career status from 2010 to 2018. In this chart, 
+the proportion of the top 10 most common NBA injuries is indicated for each of 
+the top 4 most common NBA career status caused by those injuries. 
+One noticeable observation could be drawn from the severity of the injury and 
+the career status. An example could be observed the bruised injuries happened more 
+frequently in less life impacting career status such as DNP (Did Not Play) and DTD 
+(Day To Day). Whereas, injuries involving surgery happened a lot more frequently 
+in life impacting or threatening career status such as out for season and out indefinitely.
+```{r, echo = FALSE}
+setwd("C:/Users/joshu/Documents/info201/projects/project-JahMeat")
+names(white_mortality)[1] <- "age"
+ggplot(white_mortality, aes(x = age, y = Averages)) +
+  geom_point() +
+  labs(x = 'Age of Athlete', y = 'Average SMR from 2000 to 2018', title = 'Scatterplot of Age v.s. Mortality Rate')
 
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+names(black_mortality)[1] <- "age"
+ggplot(black_mortality, aes(x = age, y = Averages, color = "red")) +
+  geom_point() +
+  labs(x = 'Age of Athlete', y = 'Average SMR from 2000 to 2018', title = 'Scatterplot of Age v.s. Mortality Rate')
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+I decided to include these charts in order to compare not only the change in mortality rates over time for these athletes, but also to show the differences in the trends over time between black and white players respectively. 
+By doing so, we are able to see how another factor such as race can play a role in determining the long term health Of these athletes, and how it compares between the two races. It also raises the question whether or not it is the race itself or other determining factors such as average household income and access to healthcare that are to blame for the differences.

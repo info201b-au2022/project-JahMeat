@@ -15,12 +15,17 @@ table_under_30 <- nba_raw %>%
   filter(ageevent <= 30) %>%
   summarise(ageevent, kilos ) 
  
-table_under_30 %>%
+chart_under_30 <- table_under_30 %>%
   ggplot(aes(ageevent, kilos,
               )) +
   geom_point(size = 3, alpha = 0.5) +
+  geom_line(size = 1)+
   labs(x = "Age", y = "Kilograms", title = "Weight and Age of NBA Players Who Died Below 30")
   theme_bw() 
+chart_under_30
+# This chart is used to visualize the weights and ages of each NBA player who died below age 30
+# This information is useful to discover the health of each of these players who died at a young 
+# age, as extremes in weight can often be proof of a decline in health. 
 
 
   
