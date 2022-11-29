@@ -7,11 +7,11 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-setwd("C:/Users/joshu/Documents/info201/projects/project-JahMeat")
-source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/chart_nba_raw.R")
-source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/chart_nba_injuries.R")
-source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/chart_mortality_bw.R")
-source("C:/Users/joshu/Documents/info201/projects/project-JahMeat/source/aggregate_table.R")
+setwd("C:/Users/josh/Documents/info201/projects/project-JahMeat")
+source("C:/Users/josh/Documents/info201/projects/project-JahMeat/source/chart_nba_raw.R")
+source("C:/Users/josh/Documents/info201/projects/project-JahMeat/source/chart_nba_injuries.R")
+source("C:/Users/josh/Documents/info201/projects/project-JahMeat/source/chart_mortality_bw.R")
+source("C:/Users/josh/Documents/info201/projects/project-JahMeat/source/aggregate_table.R")
 ```
 
 ## Data Analysis Review
@@ -26,13 +26,13 @@ knitr::kable(nba_table, format = "html", caption = "Aggregated Data")
 ## Data Visualizations
 
 ```{r, echo = FALSE}
-setwd("C:/Users/joshu/Documents/info201/projects/project-JahMeat")
+setwd("C:/Users/josh/Documents/info201/projects/project-JahMeat")
 chart_under_30
 ```
 
 This chart is used to visualize the weights and ages of each NBA player who died below age 30. This information is useful to discover the health of each of these players who died at a young  age, as extremes in weight can often be proof of a decline in health
 ```{r, echo = FALSE}
-setwd("C:/Users/joshu/Documents/info201/projects/project-JahMeat")
+setwd("C:/Users/josh/info201/projects/project-JahMeat")
 plot(injury_plot)
 ```
 
@@ -46,7 +46,7 @@ frequently in less life impacting career status such as DNP (Did Not Play) and D
 (Day To Day). Whereas, injuries involving surgery happened a lot more frequently 
 in life impacting or threatening career status such as out for season and out indefinitely.
 ```{r, echo = FALSE}
-setwd("C:/Users/joshu/Documents/info201/projects/project-JahMeat")
+setwd("C:/Users/josh/Documents/info201/projects/project-JahMeat")
 names(white_mortality)[1] <- "age"
 ggplot(white_mortality, aes(x = age, y = Averages)) +
   geom_point() +

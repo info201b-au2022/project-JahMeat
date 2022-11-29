@@ -2,7 +2,7 @@ library("tidyverse")
 library("ggplot2")
 # Retrieve and wrangle Dataset
 
-nba_injuries <- read.csv("data/injuries.csv")
+nba_injuries <- read.csv("../data/injuries.csv")
 View(nba_injuries)
 
 nba_injuries <- nba_injuries %>% 
@@ -33,7 +33,7 @@ status_frequency <- nba_injuries %>%
 # Plotting the summary of proportion of common injuries vs. common career status
 
 nba_status <- nba_injuries %>% 
-  group_by(Status) %>% 
+  group_by(Status, Injuries) %>% 
   mutate(frequency = length(Status)) %>% 
   filter(Status %in% status_frequency == TRUE) %>% 
   filter(Injuries %in% injury_frequency == TRUE)
@@ -41,12 +41,12 @@ nba_status <- nba_injuries %>%
 injury_plot <- ggplot(data = nba_status) +
   geom_col(
     aes(x = Status, y = frequency, fill = Injuries),
-    position = "fill",
+    position = "dodge"
   ) +
   labs( 
     title = "Most Common NBA Career Status caused by Types of Injuries 2010 - 2018",
     x = "NBA Career Status",
-    y = "Proportion of Injuries"
+    y = "Number of Injuries"
   )
 
 plot(injury_plot)
@@ -56,8 +56,8 @@ plot(injury_plot)
 # the proportion of the top 10 most common NBA injuries is indicated for each of 
 # the top 4 most common NBA career status caused by those injuries. 
 # One noticeable observation could be drawn from the severity of the injury and 
-# the career status. An example could be observed the bruised injuries happened more 
-# frequently in less life impacting career status such as DNP (Did Not Play) and DTD 
+# the career status. An example could be observed is that the bruised injuries happened more 
+# frequently in less life-impacting career status such as DNP (Did Not Play) and DTD 
 # (Day To Day). Whereas, injuries involving surgery happened a lot more frequently 
 # in life impacting or threatening career status such as out for season and out indefinitely.
 
