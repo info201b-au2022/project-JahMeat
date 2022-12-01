@@ -5,7 +5,7 @@ library(tidyverse)
 library(dplyr)
 
 #White athlete graph
-white_mortality <- read_excel("data/WHITEMortalityUSA2000to2018.xlsx")
+white_mortality <- read_excel("../data/WHITEMortalityUSA2000to2018.xlsx")
 View(white_mortality)
 names(white_mortality)[1] <- "age"
 ggplot(white_mortality, aes(x = age, y = Averages)) +
@@ -13,7 +13,7 @@ ggplot(white_mortality, aes(x = age, y = Averages)) +
   labs(x = 'Age of Athlete', y = 'Average SMR from 2000 to 2018', title = 'Scatterplot of Age v.s. Mortality Rate')
 
 #Black athlete graph
-black_mortality <- read_excel("data/BLACKMortalityUSA2000to2018.xlsx")
+black_mortality <- read_excel("../data/BLACKMortalityUSA2000to2018.xlsx")
 View(black_mortality)
 names(black_mortality)[1] <- "age"
 ggplot(black_mortality, aes(x = age, y = Averages, color = "red")) +

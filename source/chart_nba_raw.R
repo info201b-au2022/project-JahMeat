@@ -2,7 +2,7 @@
 
 library("tidyverse")
 library(readxl)
-nba_raw <- read_excel("data/NBA_raw_data2019.xlsx")
+nba_raw <- read_excel("../data/NBA_raw_data2019.xlsx")
 View(nba_raw)
 
 # This file creates a scatterplot of the weight and age of NBA players who died below 30. 
