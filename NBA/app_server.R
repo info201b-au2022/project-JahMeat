@@ -4,8 +4,8 @@ library(shiny)
 library(tidyverse)
 library(plotly)
 
-source("../source/chart_nba_injuries.R")
-source("../source/chart_nba_raw.R")
+source("chart_nba_injuries.R")
+source("chart_nba_raw.R")
 
 background <- p("This project is dedicated on incentivizing health well-being
                 on injuries occuring in the NBA as well as giving additional
@@ -67,7 +67,7 @@ server <- function(input, output) {
                 "Number of Injuries"
         } else if (input$position == "fill") {
             "Frequency of Injuries"
-          }
+        }
       )
     
     p <- ggplotly(injury_plot)
@@ -143,6 +143,7 @@ server <- function(input, output) {
       return(chart_under_30) 
     })
   }
+    
 })
 
 }
