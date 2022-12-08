@@ -73,6 +73,22 @@ page_three <- tabPanel(
   )
 )
 
+page_four <- tabPanel(
+  "Key Takeaways", 
+  sidebarLayout(
+    sidebarPanel(
+      radioButtons("vis", label = h3("Visualizations"),
+                   choices = list("Status Chart" = 1, "Deaths Chart" = 2), 
+                   selected = 1), 
+      actionButton("submit", label = "Generate"),
+      
+    ),
+    mainPanel(
+      takeaway,
+      plotlyOutput(outputId = "visplot")
+    )
+  )
+)
 
 
 ui <- fluidPage(theme = shinytheme("darkly"), 
@@ -80,6 +96,7 @@ ui <- fluidPage(theme = shinytheme("darkly"),
     "Stay_Ballin",
     page_one,
     page_two, 
-    page_three
+    page_three, 
+    page_four
   )
 )
