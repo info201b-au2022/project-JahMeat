@@ -90,13 +90,18 @@ page_four <- tabPanel(
   )
 )
 
+page_report <- tabPanel(
+  "Report",
+  includeMarkdown("p01-proposal.md")
+)
 
 ui <- fluidPage(theme = shinytheme("darkly"), 
   navbarPage(
     "Stay_Ballin",
     page_one,
-    page_two, 
+    page_two,
     page_three, 
-    page_four
+    page_four,
+    page_report
   )
 )

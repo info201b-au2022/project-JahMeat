@@ -1,0 +1,13 @@
+name: NBA_Injuries
+title: NBA_Injuries
+username:
+account: jahmeat
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7850523
+bundleId: 6612072
+url: https://jahmeat.shinyapps.io/NBA_Injuries/
+when: 1670530226.74686
+lastSyncTime: 1670530226.74687
+asMultiple: FALSE
+asStatic: FALSE
