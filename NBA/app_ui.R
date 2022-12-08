@@ -2,6 +2,7 @@
 
 library(shiny)
 library("shinythemes")
+library(rmarkdown)
 
 page_one <- tabPanel(
   "Introduction",
@@ -73,13 +74,17 @@ page_three <- tabPanel(
   )
 )
 
-
+page_report <- tabPanel(
+  "Report",
+  includeMarkdown("../docs/p01-proposal.md")
+)
 
 ui <- fluidPage(theme = shinytheme("darkly"), 
   navbarPage(
     "Stay_Ballin",
     page_one,
     page_two, 
-    page_three
+    page_three,
+    page_report
   )
 )

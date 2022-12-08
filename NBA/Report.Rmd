@@ -1,3 +1,14 @@
+---
+title: "Project Report"
+output: html_document
+date: "2022-12-08"
+runtime: shiny
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 # [Injuries in the NBA: Analyzing the Long Term Effects of Sports Injuries](https://github.com/info201b-au2022/project-JahMeat/blob/main/docs/p01-proposal.md)
 
 #### Code Name: `Stay_Ballin`
@@ -46,7 +57,7 @@ The primary question being asked in this project is how sports injures in the NB
 
   * **"How does NBA and its implication on competitive sports impact athletes' life expectancy"** This question unravels the mortality rate of athletes throughout every stage of their lifetime to speculate their life expectancy in order to generate implications for long term health and wellness.
 
-  * **"How does the physical attributes of athletes account for athletes' life expectancy from involvement with NBA"** This research question is meant utilize physical attributes of recorded athletes to draw a correlation to an age quota for speculating their life expectancy in order to generate implications for long term health and wellness.
+  * **"How does the physical attributes of athletes account for athletes' life expectancy from involvement with NBA"** This research question is meant utilize physical attributes of recorded athletes to draw a correlation to an age quota for speculating their life expectancy in order to generate implications for long term health and wellness. 
 
 ## **The Dataset**
 The datasets we will be using for this project are compromised by two different discussions. One type of dataset will explore the player career status in relations to the severity and types of injuries or illness. Another type of dataset will visualize the life expectancies of former NBA players as well as give insights to current players' life expectancy. By understanding the trend of injured players affecting their career and life expectancy, we can offer more insights on what injuries should be more concerned with and what can the medical faculties do to help prevent and treat these long term physical damage from affecting players' wellness and longevity. _Table 1_ concludes a list of datasets used in this project.
@@ -54,11 +65,11 @@ The datasets we will be using for this project are compromised by two different 
 _Table 1. Summary of Datasets_
 
 | Datasets | Observations | Variables | Citations |
-|--------|--------------|-----------|-----------|
-| injuries |     9784        |     5     | jaseziv83. “Extensive NBA Injuries Deep Dive Eda.” Kaggle, Kaggle, 23 Nov. 2018, https://www.kaggle.com/code/jaseziv83/extensive-nba-injuries-deep-dive-eda/report |
-| nba-injury-report      | 89        |     5     | Roto Sports, Inc. NBA Injury Report, 2022, https://www.rotowire.com/basketball/injury-report.php |
-| NBA_raw_data2019    |  4375      |     21    | Martínez, Jose A., et al. “Data Set on Mortality of National Basketball Association (NBA) Players.” Data in Brief, Elsevier, 17 Sept. 2022, https://www.sciencedirect.com/science/article/pii/S2352340922008216      |
-| MortalityUSA2000to2018     |      85       |   9   | Martínez, Jose A., et al. “Data Set on Mortality of National Basketball Association (NBA) Players.” Data in Brief, Elsevier, 17 Sept. 2022, https://www.sciencedirect.com/science/article/pii/S2352340922008216 |
+|----------|--------------|-----------|-----------|
+| injuries |     9784     |     5     | jaseziv83. “Extensive NBA Injuries Deep Dive Eda.” Kaggle, Kaggle, 23 Nov. 2018, https://www.kaggle.com/code/jaseziv83/extensive-nba-injuries-deep-dive-eda/report |
+| nba-injury-report | 89  |     5     | Roto Sports, Inc. NBA Injury Report, 2022, https://www.rotowire.com/basketball/injury-report.php |
+| NBA_raw_data2019 |  4375|     21    | Martínez, Jose A., et al. “Data Set on Mortality of National Basketball Association (NBA) Players.” Data in Brief, Elsevier, 17 Sept. 2022, https://www.sciencedirect.com/science/article/pii/S2352340922008216 |
+| MortalityUSA2000to2018 | 85 |   9   | Martínez, Jose A., et al. “Data Set on Mortality of National Basketball Association (NBA) Players.” Data in Brief, Elsevier, 17 Sept. 2022, https://www.sciencedirect.com/science/article/pii/S2352340922008216 |
 
 #### Provenance
  * **injuries** was collected by Randall Hopkins and further modified by Jason Zivkovic. The questions held accountable focused on the frequency of injuries due to teams and time of the year. This dataset was completed and up to date by 11/23/18. Because it was created on a data science social platform, it was not funded or put up for monetization. The source of the data was based off of a sports transaction database which is to document every transaction, such as trades, waiving, and injuries, in popular American sports leagues. Because the source of the dataset was an official documentation tracker and the collectors collaborated on a data science oriented social platform, the contents can be deemed accurate and trustworthy. This dataset was permitted for use by the creators with an incorporated download option.
@@ -83,12 +94,12 @@ _Table 1. Summary of Datasets_
 * **"To what extent does the average sports injury result in a career - ending injury for NBA athletes"** Through the first chart we generated
  the proportion of the top 10 most common NBA injuries is indicated for each of the top 4 most common NBA career status caused by those injuries. One noticeable observation could be drawn from the severity of the injury and the career status. An example could be observed the bruised injuries happened more frequently in less life impacting career status such as DNP (Did Not Play) and DTD (Day To Day). Whereas, injuries involving surgery happened a lot more frequently in life impacting or threatening career status such as out for season and out indefinitely.
 
-* **"How does NBA and its implication on competitive sports impact athletes' life expectancy"** Through the standard mortality rate of NBA athletes over the course of their lifetime, we observed an exponentially-increasing graph. The line began visually lifting off the axis from around age 40-50 to its exponential growth later in life. This means that NBA players are dying in middle ages due to post-injury traumas and long term conditions produced by it.
+* **"How does NBA and its implication on competitive sports impact athletes' life expectancy"** Through the standard mortality rate of NBA athletes over the course of their lifetime, we observed an exponentially-increasing graph. The line began visually lifting off the axis from around age 40-50 to its exponential growth later in life. This means that NBA players are dying in middle ages due to post-injury traumas and long term conditions produced by it. 
 
-* **"How does the physical attributes of athletes account for athletes' life expectancy from involvement with NBA"** An athlete's can actually impact their chances of deaths. Through observation of death logs from NBA players of age 30 and below, there are more occurrences of deaths below 100 kilos than above 100 kilos, reasoning that lighter players are at more risk of injury-related cases of deaths.
+* **"How does the physical attributes of athletes account for athletes' life expectancy from involvement with NBA"** An athlete's can actually impact their chances of deaths. Through observation of death logs from NBA players of age 30 and below, there are more occurrences of deaths below 100 kilos than above 100 kilos, reasoning that lighter players are at more risk of injury-related cases of deaths. 
 
 ## **Discussion**
-These findings serve as factual observations for sports medicine providers and researchers in developing plans and treatments that targets the types of injuries they should be focusing on. Before a game takes place, game hosts and related associations can determine who is at risk and set guidelines for those teams for coaches to reference. Coaches can then have better judgement on who need to sit out and who needs to not participate.
+These findings serve as factual observations for sports medicine providers and researchers in developing plans and treatments that targets the types of injuries they should be focusing on. Before a game takes place, game hosts and related associations can determine who is at risk and set guidelines for those teams for coaches to reference. Coaches can then have better judgement on who need to sit out and who needs to not participate. 
 
 ## **Conclusion**
 These outcomes indicates that the current healthcare standards and safety guidelines for players are simply not good enough. For example, we found that there are around 5 percent of players that are injured are out indefinitely. It may be an extremely small proportion but the number of players affected can certainly be an issue, raising the question of what goes accountable for these damages being done. There are two important questions that addresses how a player's health is handled. The question we just mentioned on the healthcare after an injury occurs and the question for prevention from these injuries to take place. There may be changes to game guidelines and team facilitations in order to prevent these injuries. If an injury does happen, the sports healthcare needs to provide better recovery plans for these players so they can live longer lives.
@@ -100,3 +111,6 @@ These outcomes indicates that the current healthcare standards and safety guidel
   Loberg, L.A. (2009). In That Instant It Was Over: The Athlete's Experience of a Career-Ending Injury.
 
   Sports Injury Statistics. (2019, November 19). Johns Hopkins Medicine. https://www.hopkinsmedicine.org/health/conditions-and-diseases/sports-injuries/sports-injury-statistics
+
+
+
