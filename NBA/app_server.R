@@ -5,6 +5,7 @@ library(tidyverse)
 library(plotly)
 
 source("../source/chart_nba_injuries.R")
+source("../source/chart_nba_raw.R")
 
 background <- p("This project is dedicated on incentivizing health well-being
                 on injuries occuring in the NBA as well as giving additional
@@ -16,7 +17,7 @@ background <- p("This project is dedicated on incentivizing health well-being
                 their livelihood"), "to bring attention to the current state of their
                 well-being.")
 
-picture <- img(strong("Kobe Bryant Tears Achillies' Tendon, Ending His Season in April 2013!"), 
+picture <- img( 
                src = "https://static01.nyt.com/images/2013/04/14/sports/subLAKERS/subLAKERS-superJumbo.jpg",
                width = 500, height = 300
                )
@@ -58,6 +59,32 @@ server <- function(input, output) {
     
     p <- ggplotly(injury_plot)
     return(p)
+  })
+  
+  output$deaths <- renderPlotly({
+    table_under_30 <- nba_raw %>%
+      filter(death == "Yes") %>%
+      filter(ageevent <= 30) %>%
+      filter(kilos > input$kilo[1] & kilos < input$kilo[2]) %>% 
+      summarise(ageevent, kilos ) 
+    
+    chart_under_30 <- table_under_30 %>%
+      ggplot(aes(ageevent, kilos,
+      )) +
+      geom_line(size = 1)+
+      labs(x = "Age", y = "Kilograms", title = "Weight and Age of NBA Players Who Died Below 30")
+    
+    if(input$dots == TRUE){
+      chart_under_30 <- table_under_30 %>%
+        ggplot(aes(ageevent, kilos,
+        )) +
+        geom_point(size = 3, alpha = 0.5) +
+        labs(x = "Age", y = "Kilograms", title = "Weight and Age of NBA Players Who Died Below 30")
+      
+    }
+    
+    plot <- ggplotly(chart_under_30)
+    return(plot)
   })
 
 }
