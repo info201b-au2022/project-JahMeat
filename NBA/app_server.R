@@ -4,6 +4,8 @@ library(shiny)
 library(tidyverse)
 library(plotly)
 
+source("../source/chart_nba_injuries.R")
+
 background <- p("This project is dedicated on incentivizing health well-being
                 on injuries occuring in the NBA as well as giving additional
                 insights what this could mean for the future of competitive
@@ -29,24 +31,29 @@ action <- p("We are tackling these questions by presenting some interative chart
             passionate athletes.")
 
 
-
 server <- function(input, output) {
   output$injuries <- renderPlotly({
+    
     nba_status <- nba_injuries %>% 
       group_by(Status, Injuries) %>% 
-      mutate(population = length(Status)) %>% 
+      mutate(Population = length(Status)) %>% 
       filter(Status %in% status_frequency == TRUE) %>% 
-      filter(Injuries %in% injury_frequency == TRUE)
-    
+      filter(Injuries %in% injury_frequency == TRUE) %>% 
+      filter(Injuries %in% input$injury)
+
     injury_plot <- ggplot(data = nba_status) +
       geom_col(
-        aes(x = Status, y = population, fill = Injuries),
-        position = "dodge"
+        aes_string(x = "Status", y = "Population", fill = "Injuries"),
+        position = input$position
       ) +
       labs( 
         title = "Most Common NBA Career Status caused by Types of Injuries 2010 - 2018",
         x = "NBA Career Status",
-        y = "Number of Injuries"
+        y = if (input$position == "dodge") {
+                "Number of Injuries"
+        } else if (input$position == "fill") {
+            "Frequency of Injuries"
+          }
       )
     
     p <- ggplotly(injury_plot)

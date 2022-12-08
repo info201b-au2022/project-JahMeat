@@ -2,17 +2,6 @@
 
 library(shiny)
 
-# Clean Data
-#----------------------------------------------------
-nba_injuries <- read.csv("../data/injuries.csv")
-
-nba_injuries <- nba_injuries %>% 
-  mutate(Injuries = str_extract(Notes, "\\w+"),
-         Status = str_extract(Notes, "(?<=\\()([^()]*?)(?=\\)[^()]*$)"),
-         year = str_extract(Date, "....")
-  )
-#----------------------------------------------------
-
 page_one <- tabPanel(
   "Introduction",
   titlePanel(
@@ -26,13 +15,37 @@ page_one <- tabPanel(
   action
 )
 
+injury_widget <- checkboxGroupInput(
+  inputId = "injury", 
+  label = h3("Types of Injuries"), 
+  choices = list("bruised", 
+                 "fractured", 
+                 "illness",
+                 "rest",
+                 "right",
+                 "sore",
+                 "sprained",
+                 "strained",
+                 "surgery"
+                 ),
+  selected = "bruised"
+  )
 
+position_widget <- selectInput(
+  inputId = "position", 
+  label = h3("Comparisons?"), 
+  choices = list("Stacked" = "fill", 
+                 "Side-by-Side" = "dodge" 
+                ), 
+  selected = "dodge"
+  )
 
 page_two <- tabPanel(
   "Career Injuries",
   sidebarLayout(
     sidebarPanel(
-      
+      position_widget,
+      injury_widget
     ),
     mainPanel(
       plotlyOutput(outputId = "injuries")
