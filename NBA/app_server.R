@@ -31,6 +31,19 @@ action <- p("We are tackling these questions by presenting some interative chart
             to create better health plans and implement safety guidelines for these 
             passionate athletes.")
 
+takeaway <- p("Each of these graphs address various takeaways. Firstly, the kinds of injuries
+              that result in permanent, career ending damage. For example, surgery often leads to 
+              players being out indefinitely. We can takeaway from this data the extent to which injuries are
+              ending careers. For the most part, only surgery requiring injuries will damage a player for good.
+              These kinds of injuries are relatively rare, implying that career ending injuries are rare. The 
+              second takeaway our data gives is the extent to which under-age deaths occur in NBA players. Only 30
+              players died under age 30 within our dataset. That being said, that is a very minimal 
+              number of players. However, within those 30 players only 2 of them weighed above 110 kilograms,
+              the other 28 below 110 kilograms. This implicates the possibility of weight being a factor in 
+              death rates. Finally, the third takeaway from our data is that for the most part, the NBA does
+              take proper protocol to ensure the safety of their players. All though injury is still common, 
+              for the most part it is highly treatable.")
+
 
 server <- function(input, output) {
   output$injuries <- renderPlotly({
@@ -86,5 +99,50 @@ server <- function(input, output) {
     plot <- ggplotly(chart_under_30)
     return(plot)
   })
+  
+  observeEvent(input$submit, {
+    
+  if(input$vis == 1){
+    output$visplot <- renderPlotly({
+      nba_status <- nba_injuries %>% 
+        group_by(Status, Injuries) %>% 
+        mutate(frequency = length(Status)) %>% 
+        filter(Status %in% status_frequency == TRUE) %>% 
+        filter(Injuries %in% injury_frequency == TRUE)
+      
+      injury_plot <- ggplot(data = nba_status) +
+        geom_col(
+          aes(x = Status, y = frequency, fill = Injuries),
+          position = "dodge"
+        ) +
+        labs( 
+          title = "Most Common NBA Career Status caused by Types of Injuries 2010 - 2018",
+          x = "NBA Career Status",
+          y = "Number of Injuries"
+        )
+      return(injury_plot)
+    })
+      
+  }
+  
+  if(input$vis == 2){
+    output$visplot <- renderPlotly({
+      table_under_30 <- nba_raw %>%
+        filter(death == "Yes") %>%
+        filter(ageevent <= 30) %>%
+        summarise(ageevent, kilos ) 
+      
+      chart_under_30 <- table_under_30 %>%
+        ggplot(aes(ageevent, kilos,
+        )) +
+        geom_point(size = 3, alpha = 0.5) +
+        geom_line(size = 1)+
+        labs(x = "Age", y = "Kilograms", title = "Weight and Age of NBA Players Who Died Below 30")
+      theme_bw() 
+      
+      return(chart_under_30) 
+    })
+  }
+})
 
 }

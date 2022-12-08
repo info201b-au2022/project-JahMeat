@@ -74,6 +74,23 @@ page_three <- tabPanel(
   )
 )
 
+page_four <- tabPanel(
+  "Key Takeaways", 
+  sidebarLayout(
+    sidebarPanel(
+      radioButtons("vis", label = h3("Visualizations"),
+                   choices = list("Status Chart" = 1, "Deaths Chart" = 2), 
+                   selected = 1), 
+      actionButton("submit", label = "Generate"),
+      
+    ),
+    mainPanel(
+      takeaway,
+      plotlyOutput(outputId = "visplot")
+    )
+  )
+)
+
 page_report <- tabPanel(
   "Report",
   includeMarkdown("../docs/p01-proposal.md")
@@ -83,8 +100,9 @@ ui <- fluidPage(theme = shinytheme("darkly"),
   navbarPage(
     "Stay_Ballin",
     page_one,
-    page_two, 
-    page_three,
+    page_two,
+    page_three, 
+    page_four,
     page_report
   )
 )
